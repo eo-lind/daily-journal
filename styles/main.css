@@ -3,17 +3,27 @@
 body {
     background-color: #FFF1FF;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 
 header {
-    background-color: #AF8EB5;
-    padding: 2px 20px;
+    background: rgb(228, 152, 243);
+    background: linear-gradient(45deg, rgba(168,110,179,1) 0%, rgba(175,142,181,1) 35%, rgba(225,190,231,1) 100%);
+    background-image: url("/images/wave.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 20px;
+    padding-bottom: 28px;
+    margin-top: 0;
+    padding-top: 2px;
 }
 
 h1 {
     font-size: 3em;
     font-family: 'Beth Ellen', 'Roboto', sans-serif;
     color: #ffffff;
+    margin-top: 0;
+    text-align: center;
 }
 
 /* main is the parent of the column classes */
@@ -33,22 +43,24 @@ main {
 .column_2 {
     border: 1px solid #E1BEE7;
     border-radius: 4px;
-    width: 30%;
+    width: 60%;
     padding: 20px;
     vertical-align: top;
 }
 
-.column_3 {
+/* .column_3 {
     border: 1px solid #E1BEE7;
     border-radius: 4px;
     width: 30%;
     padding: 20px;
     vertical-align: top;
     text-align: justify;
-}
+} */
 
   footer {
-    background-color: #AF8EB5;
+    background: rgb(168, 110, 179);
+    background: linear-gradient(45deg, rgba(168,110,179,1) 0%, rgba(175,142,181,1) 35%, rgba(225,190,231,1) 100%);
+    border-radius: 4px;
     padding: 10px 20px;
     color: #ffffff;
 }
@@ -107,7 +119,7 @@ fieldset {
     background-color: #ffffff;
 }
 
-#submit, #delete {
+#recordEntry, #delete {
     border: 1px solid #000000;
     border-radius: 4px;
     padding: 4px;
@@ -124,7 +136,17 @@ fieldset {
     background-color: #E1BEE7;
 }
 
-/* finish styling links */
+/* TODO finish styling links */
 a {
     color: #3e013e;
+}
+
+/* entry cards */
+
+#entry_card_container {
+    background-color: #E1BEE7;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    text-align: justify;
 }
