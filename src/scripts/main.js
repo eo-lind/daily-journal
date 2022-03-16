@@ -15,7 +15,7 @@ const showPostList = () => {
 
 const startJournal = () => {
     const postElement = document.querySelector(".postList");
-	postElement.innerHTML = "Hello. This is a test."
+	// postElement.innerHTML = ""
 }
 
 startJournal();
