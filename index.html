@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Journal</title>
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="src/styles/main.css" />
 </head>
 
 <body>
-    <header>
+    <header class="document__header">
         <h1>Daily Journal</h1>
     </header>
 
@@ -44,10 +44,11 @@
         </section>
 
         <section class="column_2">
-            <div id="entryLog"></div>
-  
+            
+            <section class="postList"></section>
+                     
         </section>
-
+            
             <!-- <form>
                 <fieldset>
                     <input type="submit" value="Edit" id="edit">
@@ -57,11 +58,11 @@
 
     </main>
 
-    <footer>
+    <footer class="document__footer">
         &copy; 2022 Olivia Lind &bullet; <a href="https://github.com/eo-lind" target="_blank">GitHub</a>
     </footer>
 
-    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="src/scripts/main.js"></script>
 </body>
 
 </html>
