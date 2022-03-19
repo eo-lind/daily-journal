@@ -9,8 +9,8 @@
         <footer class="post__footer">
             <div>Mood: ${postObject.mood}</div>
             <div>${postObject.timestamp}</div>
+            <div><button id="edit--${postObject.id}">Edit</button></div>
         </footer>
       </section>
     `
   }
-
