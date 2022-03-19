@@ -7,6 +7,7 @@ A three column daily journal with a form to submit journal info, a list of links
 
 ## Wireframe
 ![wireframe of the daily journal](images/daily-journal-wireframe.png "wireframe")
+![daily journal ERD](images/daily-journal-ERD.png "ERD")
 
 ## Credits
 Built by [eo-lind]() based on a [NSS](https://nashvillesoftwareschool.com/) assignment.
