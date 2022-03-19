@@ -48,7 +48,7 @@ applicationElement.addEventListener("click", (event) => {
 // clicks on the cancel new post button
 applicationElement.addEventListener("click", event => {
     if (event.target.id === "newPost__cancel") {
-        //clear the input fields
+        // clear the input fields
         document.getElementById('conceptsCovered').value = ''
         document.getElementById('mood').value = ''
         document.getElementById('journalEntry').value = ''
@@ -59,10 +59,9 @@ applicationElement.addEventListener("click", event => {
   applicationElement.addEventListener("click", event => {
     event.preventDefault();
     if (event.target.id === "newPost__submit") {
-    //collect the input values into an object to post to the DB
+    // collect the input values into an object to post to the DB
       const concept = document.querySelector("input[name='postTitle']").value
       const mood = document.querySelector("input[name='postMood']").value
-    //   const url = document.querySelector("input[name='journalDate']").value
       const entry = document.querySelector("textarea[name='postDescription']").value
       //we have not created a user yet - for now, we will hard code `1`.
       //we can add the current time as well
@@ -73,7 +72,12 @@ applicationElement.addEventListener("click", event => {
           mood: mood
       }
   
-    // be sure to import from the DataManager
         createPost(postObject)
+        .then(()=>{
+			showPostList()
+			document.getElementById('conceptsCovered').value = ''
+            document.getElementById('mood').value = ''
+            document.getElementById('journalEntry').value = ''
+		})
     }
   })
