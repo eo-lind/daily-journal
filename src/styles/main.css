@@ -55,6 +55,7 @@ main {
 .column_1 {
     width: 30%;
     vertical-align: top;
+    margin-right: 30px;
 }
 
 .column_2 {
@@ -86,17 +87,7 @@ fieldset {
     padding: 0 20px 0 0;
 }
 
-#journalDate {
-    margin-bottom: 10px;
-    border: 1px solid #3e013e;
-    border-radius: 4px;
-    padding: 2px 5px;
-    font-family: 'Roboto', sans-serif;
-    background-color: #E1BEE7;
-    color: #3e013e;
-}
-
-#conceptsCovered {
+#journalDate, #conceptsCovered, #mood {
     margin-bottom: 10px;
     border: 1px solid #3e013e;
     border-radius: 4px;
@@ -128,7 +119,7 @@ fieldset {
 }
 
 /* buttons */
-#recordEntry, #delete {
+button {
     border: 1px solid #3e013e;
     border-radius: 4px;
     padding: 4px;
@@ -138,22 +129,13 @@ fieldset {
     color: #3e013e;
 }
 
-#recordEntry:active, #delete:hover {
-    box-shadow: 5px 5px #3e013e;
+button:hover {
+    background-color: #FFF1FF;
 }
 
-/* #edit {
-    border: 1px solid #3e013e;
-    border-radius: 4px;
-    padding: 4px;
-    font-family: 'Roboto', sans-serif;
-    background-color: #E1BEE7;
-    color: #3e013e;
-} */
-
-/* #edit:active, #edit:hover {
+button:active {
     box-shadow: 5px 5px #3e013e;
-} */
+}
 
 /* post styling */
 
@@ -186,4 +168,8 @@ fieldset {
     background: linear-gradient(45deg, rgba(168,110,179,1) 0%, rgba(175,142,181,1) 35%, rgba(225,190,231,1) 100%);
     padding: 10px 20px;
     color: #ffffff;
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
