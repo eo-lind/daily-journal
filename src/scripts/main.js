@@ -1,6 +1,13 @@
-import { getPosts, createPost, deletePost } from "./data/DataManager.js";
+import {
+  getPosts,
+  createPost,
+  deletePost,
+  getSinglePost,
+  updatePost,
+} from "./data/DataManager.js";
 import { PostList } from "./feed/PostList.js";
 import { PostEntry } from "./feed/PostEntry.js";
+import { PostEdit } from "./feed/PostEdit.js";
 
 const showPostList = () => {
   //Get a reference to the location on the DOM where the list will display
@@ -40,18 +47,58 @@ const applicationElement = document.querySelector("main");
 applicationElement.addEventListener("click", (event) => {
   event.preventDefault();
   if (event.target.id.startsWith("delete")) {
-    const postId = event.target.id.split("--")[1];
+    const postId = event.target.id.split("__")[1];
     deletePost(postId).then((response) => {
       showPostList();
     });
   }
 });
 
-// clicks on the edit button
+// listens for clicks on the edit button and calls showEdit()
 applicationElement.addEventListener("click", (event) => {
+  event.preventDefault();
   if (event.target.id.startsWith("edit")) {
-    console.log("post clicked", event.target.id.split("--"));
-    console.log("the id is", event.target.id.split("--")[1]);
+    const postId = event.target.id.split("__")[1];
+    getSinglePost(postId).then((response) => {
+      showEdit(response);
+    });
+  }
+});
+
+// shows the post data to be edited in the edit form
+const showEdit = (postObj) => {
+  const entryElement = document.querySelector(".entryForm");
+  entryElement.innerHTML = PostEdit(postObj);
+};
+
+// listens for clicks on the update button once edit is complete
+applicationElement.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (event.target.id.startsWith("updatePost")) {
+    const postId = event.target.id.split("__")[1];
+    //collect all the details into an object
+    const conceptsCovered = document.querySelector(
+      "input[name='postTitle']"
+    ).value;
+    const moodInput = document.querySelector("input[name='postMood']").value;
+    const entryText = document.querySelector(
+      "textarea[name='postDescription']"
+    ).value;
+    const timestamp = document.querySelector("input[name='postTime']").value;
+
+    const postObject = {
+      concept: conceptsCovered,
+      mood: moodInput,
+      entry: entryText,
+      // userId: getLoggedInUser().id,
+      timestamp: parseInt(timestamp),
+      id: parseInt(postId),
+    };
+
+    updatePost(postObject).then((response) => {
+      showPostList();
+      showPostEntry();
+    });
   }
 });
 
@@ -59,9 +106,7 @@ applicationElement.addEventListener("click", (event) => {
 applicationElement.addEventListener("click", (event) => {
   if (event.target.id === "newPost__cancel") {
     // clear the input fields
-    document.getElementById("conceptsCovered").value = "";
-    document.getElementById("mood").value = "";
-    document.getElementById("journalEntry").value = "";
+    showPostEntry();
   }
 });
 

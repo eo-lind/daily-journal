@@ -28,9 +28,9 @@ export const Post = (postObject) => {
               monthNames[date.getMonth()]
             } ${date.getDate()}, ${date.getFullYear()}</div>
           </section>
-          <div id="post-btn-container>
-            <button id="edit--${postObject.id}">Edit</button>
-            <button id="delete--${postObject.id}">Delete</button>
+          <div>
+            <button id="edit__${postObject.id}">Edit</button>
+            <button id="delete__${postObject.id}">Delete</button>
           </div>
         </footer>
       </section>
