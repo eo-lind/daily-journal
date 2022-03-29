@@ -27,6 +27,13 @@
       "entry": "Donny was a good bowler and a good man. He was…he was one of us. He was a man who loved the outdoors, and bowling, and as a surfer, he explored the beaches of southern California from La Jolla to Leo Carillo, and up to Pismo.",
       "mood": "bummed",
       "id": 4
+    },
+    {
+      "timestamp": 1648514910972,
+      "concept": "Edit & Delete",
+      "entry": "Edit and delete buttons now fully functional.",
+      "mood": "EXHAUSTED",
+      "id": 5
     }
   ]
 }
