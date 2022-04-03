@@ -1,39 +1,66 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "name": "Olivia",
+      "email": "olivia@bn.com"
+    },
+    {
+      "id": 2,
+      "name": "Rupert",
+      "email": "rupert@bn.com"
+    },
+    {
+      "id": 3,
+      "name": "Bosco",
+      "email": "bosco@bn.com"
+    },
+    {
+      "name": "Bogie",
+      "email": "bogie@bn.com",
+      "id": 4
+    }
+  ],
   "posts": [
     {
       "timestamp": 1647711778191,
       "concept": "I'm Ron Burgundy?",
       "entry": "I know that one day Veronica and I are gonna to get married on top of a mountain, and there's going to be flutes playing and trombones and flowers and garlands of fresh herbs. And we will dance till the sun rises. And then our children will form a family band. And we will tour the countryside and you won't be invited.",
       "mood": "Ok",
-      "id": 1
+      "id": 1,
+      "userId": 1
     },
     {
       "timestamp": 1647711778191,
       "concept": "Complex Flexbox",
       "entry": "So, OK, like right now, for example, the Haitians need to come to America. But some people are all 'What about the strain on our resources?' But it's like, when I had this garden party for my father's birthday right? I said R.S.V.P. because it was a sit-down dinner. But people came that like, did not R.S.V.P. so I was like, totally buggin'. I had to haul ass to the kitchen, redistribute the food, squish in extra place settings, but by the end of the day it was like, the more the merrier! And so, if the government could just get to the kitchen, rearrange some things, we could certainly party with the Haitians. And in conclusion, may I please remind you that it does not say R.S.V.P. on the Statue of Liberty?",
       "mood": "Cher",
-      "id": 2
+      "id": 2,
+      "userId": 1
     },
     {
       "timestamp": 1647711778191,
       "concept": "CSS",
       "entry": "The key to faking out the parents is the clammy hands. It's a good non-specific symptom. A lot of people will tell you that a phony fever is a deadlock, but if you get a nervous mother, you could land in the doctor's office. That's worse than school. What you do is: you fake a stomach cramp, and when you're bent over, moaning and wailing, you lick your palms. It's a little childish and stupid, but then, so is high school.",
       "mood": "Batman",
-      "id": 3
+      "id": 3,
+      "userId": 1
     },
     {
       "timestamp": 1647715842877,
       "concept": "JavaScript",
       "entry": "Donny was a good bowler and a good man. He was…he was one of us. He was a man who loved the outdoors, and bowling, and as a surfer, he explored the beaches of southern California from La Jolla to Leo Carillo, and up to Pismo.",
       "mood": "bummed",
-      "id": 4
+      "id": 4,
+      "userId": 1
     },
     {
       "timestamp": 1648514910972,
       "concept": "Edit & Delete",
       "entry": "Edit and delete buttons now fully functional.",
       "mood": "EXHAUSTED",
-      "id": 5
+      "id": 5,
+      "userId": 1
     }
   ]
 }
